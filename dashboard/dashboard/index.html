@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="date-range">Date Range:</label>
+                <input type="date" id="date-range-start"> - <input type="date" id="date-range-end">
+            </div>
+            <div class="filter-group">
+                <label for="city-filter">City:</label>
+                <select id="city-filter">
+                    <option value="">All</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="customer-type-filter">Customer Type:</label>
+                <select id="customer-type-filter">
+                    <option value="">All</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <div class="kpi-name">Total Sales</div>
+                <div class="kpi-value" id="kpi-total-sales"></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-name">Average Gross Income</div>
+                <div class="kpi-value" id="kpi-avg-gross-income"></div>
+            </div>
+        </div>
+        <div class="charts-container">
+            <div class="chart-card">
+                <h2>Total Sales Trend Over Time</h2>
+                <canvas id="sales-trend-over-time"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Total Sales by Product Line</h2>
+                <canvas id="sales-by-product-line"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Gross Income by City</h2>
+                <canvas id="gross-income-by-city"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Average Rating by Customer Type</h2>
+                <canvas id="average-rating-by-customer-type"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Total Sales by Payment Method</h2>
+                <canvas id="sales-by-payment-method"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Average Quantity Sold by Day</h2>
+                <canvas id="average-quantity-sold-by-day"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Average Gross Margin Percentage by Branch</h2>
+                <canvas id="gross-margin-percentage-by-branch"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
